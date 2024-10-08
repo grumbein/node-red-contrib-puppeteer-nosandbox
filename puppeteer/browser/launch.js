@@ -40,7 +40,7 @@ module.exports = function (RED) {
             msg.puppeteer = {
               browser: await puppeteer.launch({
                 ...nodeConfig,
-                args: [`--remote-debugging-port=${nodeConfig.debugport}`],
+                args: ['--remote-debugging-port=${nodeConfig.debugport}', '--disable-gpu', '--disable-setuid-sandbox', '--no-sandbox', '--no-zygote' ],
               }),
             };
             // Browser launched sucessfully
@@ -54,7 +54,7 @@ module.exports = function (RED) {
           msg.puppeteer = {
             browser: await puppeteer.launch({
               ...nodeConfig,
-              args: [`--remote-debugging-port=${nodeConfig.debugport}`],
+              args: ['--remote-debugging-port=${nodeConfig.debugport}', '--disable-gpu', '--disable-setuid-sandbox', '--no-sandbox', '--no-zygote' ],
             }),
           };
           // Browser launched sucessfully

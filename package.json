@@ -36,7 +36,7 @@
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
-      "puppeteer-browser-launch": "puppeteer/browser/launch.js",
-          }
+      "puppeteer-browser-launch": "puppeteer/browser/launch.js"
+    }
   }
 }
